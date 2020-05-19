@@ -65,9 +65,9 @@ brew install rename
 brew install imagemagick 
 
 # Cloud
+brew cask install osxfuse
 brew install gcsfuse
 brew install awscli
-brew install heroku
 
 # Remove outdated versions from the cellar.
 brew upgrade
