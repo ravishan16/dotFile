@@ -380,6 +380,9 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Show only open applications in the Dock
 #defaults write com.apple.dock static-only -bool true
 
+# Change Dock orientation to right
+defaults write com.apple.dock orientation left
+
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
