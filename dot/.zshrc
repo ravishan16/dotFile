@@ -26,7 +26,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize autojump node npm ng brew web-search docker yarn virtualenv zsh-autosuggestions gcloud battery)
+plugins=(git colored-man-pages colorize autojump node npm ng brew web-search docker yarn virtualenv gcloud battery)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,12 +59,24 @@ GCLOUD_SDK_HOME=$HOME/google-cloud-sdk
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #Source DotFiles
-export DOT_HOME = "~/projects/git/dotfile/dot"
-source ${DOT_HOME}/.export
-source ${DOT_HOME}/.env
-source ${DOT_HOME}/.aliases
-source ${DOT_HOME}/.functions
+source ~/projects/git/dotfile/dot/.export
+source ~/projects/git/dotfile/dot/.env
+source ~/projects/git/dotfile/dot/.aliases
+source ~/projects/git/dotfile/dot/.functions
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

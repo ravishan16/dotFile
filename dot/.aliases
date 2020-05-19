@@ -17,9 +17,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias h="history"
-alias j="jobs"
 alias bit="cd ~/projects/bitbucket"
-alias git="cd ~/projects/git"
 alias sup='supervisord -c ~/projects/supervisor/supervisor.conf'
 alias f='open -a Finder ./'
 
