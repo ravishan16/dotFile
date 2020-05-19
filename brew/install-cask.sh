@@ -16,8 +16,8 @@ brew cask install ngrok
 brew cask install iterm2
 brew cask install osxfuse
 brew cask install dbeaver-community
-brew cask install visual-studio-code
 brew cask install gitkraken
+brew cask install visual-studio-code
 # brew cask install docker
 
 #Communication

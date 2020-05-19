@@ -59,6 +59,7 @@ brew install wget
 brew install htop
 brew install hugo
 brew install zsh
+brew install zsh-syntax-highlighting
 brew install utf8proc
 brew install dockutil
 brew install rename

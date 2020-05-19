@@ -79,6 +79,6 @@ function jn() {
 }
 
 # Git clone
-gc(){
-	eval -"git clone $1"
+function gc(){
+	git clone $1
 }

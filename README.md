@@ -22,3 +22,20 @@ cd ~/projects/git
 git clone https://github.com/ravishan16/dotfile/
 cd dotfile
 ```
+
+## Instal OhMyZsh
+
+```
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+### Plugin
+
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
+```
+
+### Replace ~/.zshrc
+
+```
+cp ~/projects/git/dotfile/dot/.zshrc ~/.zshrc 
+```

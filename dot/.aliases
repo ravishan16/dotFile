@@ -1,6 +1,3 @@
-
-
-
 #!/usr/bin/env bash
 
 # Easier navigation: .., ..., ...., ....., ~ and -
@@ -28,8 +25,8 @@ alias f='open -a Finder ./'
 
 #Docker
 
-alias dockerclean = "docker system prune -a"
-alias dps ="docker ps -a"s
+alias dockerclean="docker system prune -a"
+alias dockerps="docker ps -a"
 
 
 # Detect which `ls` flavor is in use
@@ -52,8 +49,7 @@ alias max="osascript -e 'set volume output volume 100'"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Toggle Darkmode
-alias dark=”osascript -e ‘tell application \”System Events\”’ -e ‘tell appearance preferences’ -e ‘set dark mode to not dark mode’ -e ‘end tell’ -e ‘end tell’”
-
+alias dark="osascript -e 'tell application \"System Events\"' -e 'tell appearance preferences' -e 'set dark mode to not dark mode' -e 'end tell' -e 'end tell'"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
