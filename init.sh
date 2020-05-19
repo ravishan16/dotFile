@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-SOURCE="https://github.com/ravishan16/dotFile"
-TARBALL="$SOURCE/tarball/master"
-TARGET="$HOME/.dotfiles"
+#install Home Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-mkdir -p "$TARGET"
+#instal Brew and Cask packages
+set -- -f; source .brew/install-brew.sh
+set -- -f; source .brew/install-cask.sh
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/cask
-brew tap caskroom/versions
+
+#Set Macos Default
+source system/macos.sh
