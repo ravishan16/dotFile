@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$_";
+}
+
+#open CSV file in excel
+function excel(){
+open $1 -a "Microsoft Excel"
+}
+
+# custom mac terminal functions
+# adjust volumne through commandline
+# e.g. vol 0 means turn off audio
+# e.g. vol 10 means turn the f*** up
+vol(){
+	osascript -e "set Volume $1"
+}
+
+
+# Clean
+cleanmymac(){
+    dscacheutil -flushcache && killall -HUP mDNSResponder
+    /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder
+    find . -type f -name '*.DS_Store' -ls -delete
+    sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+}
+
+# Start an HTTP server from a directory, optionally specifying the port
+function server() {
+	local port="${1:-8000}";
+	sleep 1 && open "http://localhost:${port}/" &
+	# Set the default Content-Type to `text/plain` instead of `application/octet-stream`
+	# And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
+	python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
+}
+
+# Compare original and gzipped file size
+function gz() {
+	local origsize=$(wc -c < "$1");
+	local gzipsize=$(gzip -c "$1" | wc -c);
+	local ratio=$(echo "$gzipsize * 100 / $origsize" | bc -l);
+	printf "orig: %d bytes\n" "$origsize";
+	printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio";
+}
+
+# `o` with no arguments opens the current directory, otherwise opens the given
+# location
+function o() {
+	if [ $# -eq 0 ]; then
+		open .;
+	else
+		open "$@";
+	fi;
+}
+
+# `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
+# the `.git` directory, listing directories first. The output gets piped into
+# `less` with options to preserve color and line numbers, unless the output is
+# small enough for one screen.
+function tre() {
+	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
+}
+
+# Start a GCP Compute instance
+function gstart() {
+    eval "gcloud compute instances start $1"
+}
+
+function gstop() {
+    eval "gcloud compute instances start $1"
+}
+
+#start a jupyter notebook
+function jn() {
+    local port="${1:-8888}";
+    eval "jupyter notebook --no-browser --port $1"
+}
+
+# Git clone
+gc(){
+	eval -"git clone $1"
+}
