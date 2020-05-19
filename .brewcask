@@ -18,7 +18,7 @@ brew cask install osxfuse
 brew cask install dbeaver-community
 brew cask install visual-studio-code
 brew cask install gitkraken
-brew cask install docker
+# brew cask install docker
 
 #Communication
 brew cask install skype
