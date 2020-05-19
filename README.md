@@ -37,5 +37,13 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 ### Replace ~/.zshrc
 
 ```
-cp ~/projects/git/dotfile/dot/.zshrc ~/.zshrc 
+mv ~/.zshrc ~/.zshrc.backup
+cp ~/projects/git/dotfile/dot/.zshrc ~/.zshrc
+```
+
+
+### Install Python (Miniconda)
+```
+brew cask install python
+ conda init "$(basename "${SHELL}")"
 ```

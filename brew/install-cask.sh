@@ -2,7 +2,6 @@
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install firefox
-brew cask install google-chrome-canary
 brew cask install spotify
 brew cask install alfred
 brew cask install cheatsheet
@@ -10,7 +9,7 @@ brew cask install keycastr
 brew cask install itsycal
 brew cask install grammarly
 brew cask install ccleaner
-
+brew cask install keybase
 #Dev Tools
 brew cask install ngrok
 brew cask install iterm2
@@ -19,6 +18,7 @@ brew cask install dbeaver-community
 brew cask install gitkraken
 brew cask install visual-studio-code
 # brew cask install docker
+brew cask install miniconda
 
 #Communication
 brew cask install skype
@@ -38,4 +38,5 @@ brew cask install quicklook-csv
 brew cask install suspicious-package
 brew cask install webpquicklook
 brew cask install betterzip
+
 

@@ -75,10 +75,5 @@ function gstop() {
 #start a jupyter notebook
 function jn() {
     local port="${1:-8888}";
-    eval "jupyter notebook --no-browser --port $1"
-}
-
-# Git clone
-function gc(){
-	git clone $1
+    eval "jupyter notebook --no-browser --ip 0.0.0.0 --port $port"
 }
