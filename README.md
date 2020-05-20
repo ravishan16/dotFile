@@ -23,6 +23,12 @@ git clone https://github.com/ravishan16/dotfile/
 cd dotfile
 ```
 
+## Install Brew Packages
+
+```
+source init.sh
+```
+
 ## Instal OhMyZsh
 
 ```
