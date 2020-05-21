@@ -4,11 +4,11 @@ Ravi's Dotfile Mac setup from scratch
 This is WIP!!!!!
 
 # References
-[Mathias Bynens Dotfiles](https://github.com/mathiasbynens/dotfiles)!
-[Oh My Zsh](https://ohmyz.sh/)!
-[Zach Holman Dotfiles](https://github.com/holman/dotfiles)!
-[Getting Started With Dotfiles - Lars Kappert](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)!
-[Awesome Dotfiles](https://project-awesome.org/webpro/awesome-dotfiles)!
+- [Mathias Bynens Dotfiles](https://github.com/mathiasbynens/dotfiles)!
+- [Oh My Zsh](https://ohmyz.sh/)!
+- [Zach Holman Dotfiles](https://github.com/holman/dotfiles)!
+- [Getting Started With Dotfiles - Lars Kappert](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789)!
+- [Awesome Dotfiles](https://project-awesome.org/webpro/awesome-dotfiles)!
 
 ## Install Command Line Tools
 
