@@ -10,7 +10,9 @@ brew cask install itsycal
 brew cask install grammarly
 brew cask install ccleaner
 brew cask install keybase
+
 #Dev Tools
+brew cask install java
 brew cask install ngrok
 brew cask install iterm2
 brew cask install osxfuse
@@ -26,6 +28,7 @@ brew cask install zoomus
 brew cask install blue-jeans
 brew cask install slack
 brew cask install microsoft-teams
+brew cask install basecamp
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode

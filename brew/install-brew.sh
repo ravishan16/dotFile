@@ -76,3 +76,8 @@ brew install awscli
 brew upgrade
 brew cleanup
 
+#gpg 
+brew install gpg1
+brew install pinentry-mac
+brew upgrade gnupg  # This has a make step which takes a while
+brew link --overwrite gnupg

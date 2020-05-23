@@ -10,6 +10,20 @@ function excel(){
 open $1 -a "Microsoft Excel"
 }
 
+#usage setdb pipe foo.dat or setdb bar.csv
+#open CSV/TSV/PIPE delimited file in dbeaver
+#set your DIRECTORY to folder where you wan to root directory where you want to store csv/tsv
+# ARgument 1 is csv/tsv/pipe you also should create a folder under the db_root for csv/pipe or what ever delimiter
+function setdb(){
+	db_root=$GIT_HOME/flatfile_dbeaver/data
+	#Take file basename
+	orig_filename="$(basename $2)"
+	#replace . with _
+	filename=${orig_filename//"."/"_"}
+	#copy file to csv/tsv/pipe folder under dbroot based on $1 paramter
+	eval "cp $2 $db_root/$1/$filename.csv"
+}
+
 # custom mac terminal functions
 # adjust volumne through commandline
 # e.g. vol 0 means turn off audio

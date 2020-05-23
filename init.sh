@@ -7,10 +7,6 @@
 set -- -f; source brew/install-brew.sh
 set -- -f; source brew/install-cask.sh
 
-
-#Set Macos Default
-source system/macos.sh
-
 #Install Python ( Minocnda in Brew Cask)
 conda init "$(basename "${SHELL}")"
 pip install -r python/requirements.txt
@@ -26,3 +22,6 @@ dockutil --no-restart --add "/Applications/"
 dockutil --no-restart --add "~/Downloads/"
 
 killall Dock
+
+#Set Macos Default
+source system/macos.sh
