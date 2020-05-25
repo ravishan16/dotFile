@@ -3,18 +3,18 @@
 
 Redis is a powerful in-memory datastore widely used as cache, pub/sub (message broker) for [further reading..](https://redis.io) 
 
-## Installing redis on mac
+## Installing Redis on mac
 
-there are many options to install redis on mac you can [Download]() the code and compile it or use a docker image. I prefer using [Homebrew](https://brew.sh/) to install and manage redis on mac. It is also easy to uninstall redis using brew.
-```
-brew install redis
+there are many options to install Redis on mac you can [Download]() the code and compile it or use a docker image. I prefer using [Homebrew](https://brew.sh/) to install and manage Redis on mac. It is also easy to uninstall Redis using brew.
+``` shell
+> brew install redis
 ```
 
 
-## Starting redis server as a foreground process
-start the server as a foreground process using redis-server command. To exit ctrl+c
-```
- ~  redis-server
+## Starting Redis server as a foreground process
+starts the server as a foreground process using redis-server command. To exit ctrl+c
+``` shell
+ > redis-server
 
 15594:C 25 May 2020 18:08:37.005 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
 15594:C 25 May 2020 18:08:37.005 # Redis version=6.0.3, bits=64, commit=00000000, modified=0, pid=15594, just started
@@ -42,34 +42,36 @@ start the server as a foreground process using redis-server command. To exit ctr
 15594:M 25 May 2020 18:08:37.008 * Ready to accept connections
 ```
 
-## Starting/Stopping redis server as a background service
+## Starting/Stopping Redis server as a background service
 
-Starting/Stopping redis server can be done usign brew services. default redis starts on port 6379 as a background service
+Starting/Stopping Redis server can be done using brew services. By default, Redis starts on port 6379 as a background service
 
 ### List all brew services
 
-```
-brew services list
+``` shell
+> brew services list
 ```
 
 ### Start redis
 
+``` shell
+> brew services start redis
 ```
-brew services start redis
-```
+
 ### Stop redis
 
-```
-brew services stop redis
+``` shell
+> brew services stop redis
 ```
 
 ### Restart redis
 
-```
-brew services restart redis
+``` shell
+> brew services restart redis
 ```
 
-## Check if redis is up
+## Check if Redis is up
+
 command redis-cli ping should respond with a PONG
 ``` shell
 > redis-cli ping
@@ -77,12 +79,14 @@ PONG
 ```
 
 ## Configuring Redis
-To congifure redis and change the default edit the /usr/local/etc/redis.conf  file and restart redis server. 
+
+To configure Redis and change the default edit the /usr/local/etc/redis.conf file and restart the Redis server. 
 Check the configuration section for [more](https://redis.io/topics/config) to configure users check the [ACL (Access Control List)](https://redis.io/topics/acl)
 
 
 ## useful aliases add to ~/.zshrc or ~/.bash_profile
-```
+
+``` shell
 alias redis-start="brew services start redis"
 alias redis-stop="brew services stop redis"
 alias redis-restart="brew services restart redis"
@@ -91,15 +95,15 @@ alias redis-monitor="redis-cli monitor"
 
 
 ### [Useful redis commands](https://redis.io/topics/rediscli)
-```
+``` shell
 # connect to a different redis server or port 
-redis-cli -h <address> -p <port>
+> redis-cli -h <address> -p <port>
 
 # List users
-redis-cli -p 6378 ACL LIST
+> redis-cli ACL LIST
 
 # Continous stat
- ~  redis-cli --stat
+> redis-cli --stat
 ------- data ------ --------------------- load -------------------- - child -
 keys       mem      clients blocked requests            connections          
 1          1.02M    1       0       0 (+0)              1           
@@ -109,7 +113,7 @@ keys       mem      clients blocked requests            connections
 1          1.02M    1       0       4 (+1)              1           
 
 # Monitor commandis is a super useful it stdouts all the command received by redis
- ~  redis-cli monitor
+> redis-cli monitor
 OK
 1590445706.871636 [0 127.0.0.1:52583] "ping"
 1590445716.910679 [0 127.0.0.1:52642] "flushall"

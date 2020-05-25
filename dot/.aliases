@@ -78,5 +78,5 @@ alias glist="gcloud compute instances list"
 #redis
 alias redis-start="brew services start redis"
 alias redis-stop="brew services stop redis"
-alias redis-restart="brew services stop redis"
+alias redis-restart="brew services restart redis"
 alias redis-monitor="redis-cli monitor"
