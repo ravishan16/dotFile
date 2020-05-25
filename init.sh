@@ -9,6 +9,9 @@ set -- -f; source brew/install-cask.sh
 
 #Install Python ( Minocnda in Brew Cask)
 conda init "$(basename "${SHELL}")"
+#set conda forge channel
+conda config --add channels conda-forge
+conda config --set channel_priority strict
 pip install -r python/requirements.txt
 
 # Clean Dock

@@ -65,7 +65,8 @@ brew install zsh-autosuggestions
 brew install utf8proc
 brew install dockutil
 brew install rename
-brew install imagemagick 
+brew install imagemagick
+brew install redis 
 
 # Cloud
 brew cask install osxfuse

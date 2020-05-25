@@ -74,3 +74,9 @@ alias reload="exec $SHELL -l"
 
 #google cloud
 alias glist="gcloud compute instances list"
+
+#redis
+alias redis-start="brew services start redis"
+alias redis-stop="brew services stop redis"
+alias redis-restart="brew services stop redis"
+alias redis-monitor="redis-cli monitor"
