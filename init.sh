@@ -2,6 +2,8 @@
 
 #install Home Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/ravi/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #instal Brew and Cask packages
 set -- -f; source brew/install-brew.sh
