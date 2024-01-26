@@ -1,6 +1,9 @@
 #brew 
 brew install --cask dropbox
+brew install --cask google-drive
 brew install --cask google-chrome
+brew install --cask arc
+
 # brew  install firefox
 # brew  install spotify
 brew install --cask raycast
