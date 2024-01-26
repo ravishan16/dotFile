@@ -10,6 +10,7 @@ set -- -f; source brew/install-brew.sh
 set -- -f; source brew/install-cask.sh
 
 #Install Python ( Minocnda in Brew Cask)
+brew install --cask miniconda
 conda init "$(basename "${SHELL}")"
 #set conda forge channel
 conda config --add channels conda-forge
