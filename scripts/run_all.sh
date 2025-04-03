@@ -5,9 +5,8 @@ set -e # Exit immediately if a command exits with a non-zero status.
 # Script: run_all.sh
 # Author: Ravishankar Sivasubramaniam
 # Description: Master script to run macOS setup scripts. Provides an interactive
-7:# Description: Master script to run macOS setup scripts. Provides an interactive
-8:#              menu (0-based). Runs selected scripts directly without dependencies.
-9:#              Colorized output. Exits on first error.
+#              menu (0-based). Runs selected scripts directly without dependencies.
+#              Colorized output. Exits on first error.
 # -----------------------------------------------------------------------------
 
 # --- Colors ---
@@ -44,8 +43,7 @@ display_menu() {
     local i=0; for script_name in "${AVAILABLE_SCRIPTS[@]}"; do printf "%2d) %s\n" "$i" "$script_name"; i=$((i + 1)); done; echo ""
     echo -e "${C_CYAN}Options:${C_RESET}"
     echo -e "  ${C_BOLD}all${C_RESET}) Run all scripts (0-${LAST_INDEX}) in sequence"
-45:   ${C_BOLD}all${C_RESET}) Run all scripts (0-${LAST_INDEX}) in sequence
-46:   ${C_BOLD}#${C_RESET}) Run ONLY specific script number(s) (e.g., '0 2 4')
+    echo -e "   ${C_BOLD}#${C_RESET}) Run ONLY specific script number(s) (e.g., '0 2 4')" # Clarified
     echo -e "   ${C_BOLD}q${C_RESET}) Quit"
     echo -e "${C_BOLD}${C_MAGENTA}----------------------------------------${C_RESET}"
 }
