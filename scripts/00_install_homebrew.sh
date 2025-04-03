@@ -31,12 +31,21 @@ else
       exit 1 # Exit, requires user interaction
   fi
   # Install Homebrew using the official script
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install Homebrew using the official script
+# Before executing, consider verifying the checksum of the script
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   print_message "Homebrew installed successfully."
 
   # Add Homebrew to PATH (Installer usually does this, but explicit fallback)
   print_message "Adding Homebrew to your PATH (if needed)..."
-  if [[ "$(uname -m)" == "arm64" ]]; then BREW_PREFIX="/opt/homebrew"; else BREW_PREFIX="/usr/local"; fi
+if [[ "$(uname -m)" == "arm64" ]]; then
+  BREW_PREFIX="/opt/homebrew"
+elif [[ "$(uname -m)" == "x86_64" ]]; then
+  BREW_PREFIX="/usr/local"
+else
+  echo "Unknown architecture"
+  exit 1
+fi
   eval "$(${BREW_PREFIX}/bin/brew shellenv)"
   CURRENT_SHELL=$(basename "$SHELL")
   if [[ "$CURRENT_SHELL" == "zsh" ]]; then PROFILE_FILE="$HOME/.zprofile"; elif [[ "$CURRENT_SHELL" == "bash" ]]; then if [[ -f "$HOME/.bash_profile" ]]; then PROFILE_FILE="$HOME/.bash_profile"; else PROFILE_FILE="$HOME/.profile"; fi; else PROFILE_FILE="$HOME/.profile"; fi
