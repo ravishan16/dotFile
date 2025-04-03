@@ -146,7 +146,7 @@ This repository is organized to separate setup logic from personal configuration
 * `.gitignore`: Tells Git which files/folders *within this repository* to ignore (e.g., `.env`).
 * `README.md`: This file.
 * `scripts/`: Contains all the numbered setup scripts (`00` to `09`) and the master runner (`run_all.sh`).
-* `dot/`: **(Your Personal Config)** Contains *your* configuration files (dotFile). The setup scripts will create symbolic links from your home directory (`$HOME`) pointing to the files inside this folder (e.g., `$HOME/.zshrc` -> `.../dotFile/dot/.zshrc`). You customize these files!
+148:* `dot/`: **(Your Personal Config)** Contains *your* configuration files (dotFile). The setup scripts will create symbolic links from your home directory (`$HOME`) pointing to the files inside this folder (e.g., `$HOME/.zshrc` -> `.../dotFile/dot/.zshrc`). You customize these files!
 * `python/`: Contains Python-related files, primarily your `requirements.txt` for `pip`.
 
 ## 4. Key Tools Explained (Brief Overview)
