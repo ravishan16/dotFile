@@ -1,6 +1,6 @@
 # Automate Your Mac Setup: A Developer’s Guide
 
-![Banner](..\assets\banner_2.png)
+![Banner](..\assets\banner_1.png)
 
 Setting up a new Mac for development can be tedious. Installing tools, configuring the shell, and tweaking settings by hand often takes hours and can vary between machines. After years of doing this manually across multiple devices, I created an automated setup to handle it more efficiently.
 
