@@ -5,8 +5,9 @@ set -e # Exit immediately if a command exits with a non-zero status.
 # Script: run_all.sh
 # Author: Ravishankar Sivasubramaniam
 # Description: Master script to run macOS setup scripts. Provides an interactive
-#              menu (0-based). Runs selected scripts directly without dependencies.
-#              Colorized output. Exits on first error.
+7:# Description: Master script to run macOS setup scripts. Provides an interactive
+8:#              menu (0-based). Runs selected scripts directly without dependencies.
+9:#              Colorized output. Exits on first error.
 # -----------------------------------------------------------------------------
 
 # --- Colors ---
