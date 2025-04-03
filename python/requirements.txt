@@ -1,3 +1,31 @@
-jupyter
-numpy
-pandas
+# ----------------------------------------------------
+# Example requirements.txt for Python Setup
+# (Place in python/requirements.txt)
+# ----------------------------------------------------
+
+# --- Core Data Science ---
+numpy               # Fundamental package for numerical computing
+pandas              # Data manipulation and analysis library
+scipy               # Scientific and technical computing library
+scikit-learn        # Machine learning library
+
+# --- Plotting ---
+matplotlib          # Core plotting library
+seaborn             # Statistical data visualization based on matplotlib
+
+# --- Jupyter Ecosystem ---
+jupyterlab          # Next-generation web-based user interface for Project Jupyter
+notebook            # Classic Jupyter Notebook interface
+ipython             # Powerful interactive Python shell (Jupyter kernel)
+ipywidgets          # Interactive HTML widgets for Jupyter notebooks/lab
+
+# --- Web Framework ---
+flask               # Micro web framework for Python
+
+# --- Utility ---
+requests            # Simple HTTP library for making requests
+python-dotenv       # Reads key-value pairs from a .env file
+
+# Add other packages below
+# e.g., beautifulsoup4, sqlalchemy, tensorflow, torch, etc.
+
