@@ -1,6 +1,6 @@
 # Ravi's macOS dotFile Setup: Your Automated Development Environment
 
-![Banner](assets\banner_1.png)
+![Banner](assets/banner_1.png)
 
 # macOS Development Environment Setup
 
