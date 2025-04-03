@@ -242,3 +242,10 @@ This setup installs and configures several important tools. See the **User Guide
 ## 8. Disclaimer
 
 These scripts modify system settings and install software. While reviewed for robustness, run them at your own risk. It is **highly recommended** to test the entire process on a virtual machine or a secondary, non-critical user account before running it on your primary system, especially for the first time or after making significant changes. Back up important data before proceeding.
+
+
+## Contributing
+We welcome contributions! Please see our contributing guidelines for details on how to submit pull requests, report issues, and contribute to development.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
