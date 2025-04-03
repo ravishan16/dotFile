@@ -1,5 +1,7 @@
 # Automate Your Mac Setup: A Developer’s Guide
 
+![Banner](..\assets\banner_2.png)
+
 Setting up a new Mac for development can be tedious. Installing tools, configuring the shell, and tweaking settings by hand often takes hours and can vary between machines. After years of doing this manually across multiple devices, I created an automated setup to handle it more efficiently.
 
 This post outlines a tool that cuts Mac setup time to about an hour. It’s something I’ve used myself and shared with others, like when I set up my son’s Mac mini. You can find it on GitHub at ravishan16/dotFile. Feel free to try it, tweak it, or suggest improvements.
@@ -83,7 +85,7 @@ Here’s how to use the setup on your Mac:
     ```
     Pick "all" from the menu and enter your password when asked.
 
-    ![runall](assets\runall.png)
+    ![runall](..\assets\runall.png)
     
 6.  **Finish Up:**
     * Restart your terminal.
