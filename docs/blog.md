@@ -4,7 +4,7 @@
 
 Setting up a new Mac for development can be tedious. Installing tools, configuring the shell, and tweaking settings by hand often takes hours and can vary between machines. After years of doing this manually across multiple devices, I created an automated setup to handle it more efficiently.
 
-This post outlines a tool that cuts Mac setup time to about an hour. It’s something I’ve used myself and shared with others, like when I set up my son’s Mac mini. You can find it on GitHub at ravishan16/dotFile. Feel free to try it, tweak it, or suggest improvements.
+This post outlines a tool that cuts Mac setup time to about an hour. It’s something I’ve used myself and shared with others, like when I set up my son’s Mac mini. You can find it on GitHub at [ravishan16/dotFile](https://github.com/ravishan16/dotFile). Feel free to try it, tweak it, or suggest improvements.
 
 **Why Automate?**
 
@@ -119,6 +119,6 @@ Contributions keep it practical and relevant.
 
 Automating your Mac setup cuts down on time and hassle. This tool gets you a consistent dev environment with Zsh, Oh My Zsh, and plugins included, so you can focus on coding.
 
-Check it out: `ravishan16/dotFile`
+Check it out: [ravishan16/dotFile](https://github.com/ravishan16/dotFile)
 
 If it helps or you’ve got thoughts, let me know. I’d like to see it grow into something developers can rely on.

@@ -1,5 +1,7 @@
 # Ravi's macOS dotFile Setup: Your Automated Development Environment
 
+![Banner](assets\banner_1.png)
+
 # macOS Development Environment Setup
 
 This project provides scripts to automate the setup of your macOS development environment. It installs essential tools, configures your shell, and manages your personal settings (`dotFile`).
