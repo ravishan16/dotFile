@@ -45,7 +45,7 @@ This setup leverages several standard technologies:
 | [Custom Shell Aliases & Functions 🛠️](docs/custom_alias_userguide.md) | Learn how to create and use custom aliases and functions in your shell.    |
 
 ## 1. Installation & Setup
-
+47:## 1. Installation & Setup
 Follow these steps after cloning your fork.
 
 ### 1.1. Prerequisites (Do This First on a New Mac)
