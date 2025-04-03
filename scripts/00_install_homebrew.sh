@@ -31,7 +31,9 @@ else
       exit 1 # Exit, requires user interaction
   fi
   # Install Homebrew using the official script
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install Homebrew using the official script
+# Before executing, consider verifying the checksum of the script
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   print_message "Homebrew installed successfully."
 
   # Add Homebrew to PATH (Installer usually does this, but explicit fallback)
