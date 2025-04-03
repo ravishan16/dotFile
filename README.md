@@ -129,7 +129,7 @@ Follow these steps after cloning your fork.
 ### 1.4. Post-Setup Actions (Required)
 
 1.  **Restart Terminal:** **Crucial!** Quit and reopen your terminal, or log out/in.
-2.  **Add SSH Key to GitHub:** If script `08` ran, copy the public key it printed and add it to your GitHub account settings online.
+131:2.  Add SSH Key to GitHub: If script `08` ran, copy the public key it printed and add it to your GitHub account settings online.
 3.  **Log into Apps:** Launch and log into GUI apps (Docker, Bitwarden, Dropbox, etc.).
 4.  **Final Configurations:** Install VS Code extensions, configure Docker, etc.
 
