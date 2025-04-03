@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e # Keep commented out for interactive menu logic
 # set -e # Keep commented out for interactive menu logic
 
 # -----------------------------------------------------------------------------
