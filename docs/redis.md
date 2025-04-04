@@ -1,4 +1,3 @@
-![Redis Logo](https://redis.io/images/redis-white.png)
 
 # Redis Cheatsheet for macOS 🍎
 
