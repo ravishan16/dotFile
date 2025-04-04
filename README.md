@@ -1,8 +1,9 @@
 # Ravi's macOS dotFile Setup: Your Automated Development Environment
 
-![Banner](assets/banner_1.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/ravishan16/dotFile?style=social)](https://github.com/ravishan16/dotFile/stargazers)
 
-# macOS Development Environment Setup
+![Banner](https://raw.githubusercontent.com/ravishan16/dotFile/main/assets/banner_1.png) # macOS Development Environment Setup
 
 This project provides scripts to automate the setup of your macOS development environment. It installs essential tools, configures your shell, and manages your personal settings (`dotFile`).
 
@@ -28,10 +29,18 @@ This setup leverages several standard technologies:
 * **Oh My Zsh:** A framework for managing Zsh configuration, making it easy to use themes and plugins.
 * **Powerlevel10k:** A fast and highly customizable theme for Zsh, providing an informative prompt.
 * **Miniconda:** A minimal installer for the `conda` package and environment manager, excellent for managing Python (and other language) packages and creating isolated project environments.
+* **Rust & Cargo:** A modern systems programming language focused on safety and performance, installed via `rustup` (script `09`). Cargo is its build tool and package manager.
+* **mdBook:** A utility (installed via Cargo) used to create an online book from the Markdown guides in the `docs/` folder.
 * **Symbolic Links (`ln -s`):** Used by the scripts to link your configuration files from the `dot/` directory in this repository to their expected locations in your home directory (`$HOME`). This means changes in your repository are immediately reflected in your live environment.
 
+## Guides (Published via mdBook)
 
-## Guides
+The detailed guides for installation and tool usage are maintained as Markdown files in the `/docs` directory. They are automatically built into an online book using **mdBook** and published via GitHub Actions to GitHub Pages.
+
+**📚 [Access the Online Guides Here](https://ravishan16.github.io/dotFile/)** You can also build and view the guides locally:
+1. Ensure you have Rust and `mdbook` installed (script `09_install_rust.sh` handles this).
+2. Navigate to the repository root directory.
+3. Run `mdbook serve --open`.
 
 | Guide Title                                              | Description                                                                 |
 |----------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -42,12 +51,13 @@ This setup leverages several standard technologies:
 | [Managing Python with Conda (Miniconda)](docs/Conda_User_Guide.md) | Guide to managing Python environments and packages with Conda.             |
 | [Basic Docker Maintenance 🐳🧹](docs/docker_user_guide.md) | Learn how to prune and clean up Docker containers, images, and volumes.    |
 | [Your Terminal Command Center (iTerm2) 💻](docs/iterm_user_guide.md) | Guide to customizing and using iTerm2 for an efficient terminal experience.|
+| [Rust Essentials Guide 🦀](docs/rust_essentials_guide.md) | Quick reference for essential Rust and Cargo commands.                     |
 | [Mac Keyboard Shortcut Cheat Sheet ⚡️](docs/mac_cheatsheet.md) | A handy list of keyboard shortcuts to boost your productivity on macOS.    |
 | [Basic Mac Housekeeping 🧹✨](docs/mac_user_guide.md)     | Tips for keeping your Mac clean, organized, and running smoothly.          |
 | [Custom Shell Aliases & Functions 🛠️](docs/custom_alias_userguide.md) | Learn how to create and use custom aliases and functions in your shell.    |
 
 ## 1. Installation & Setup
-47:## 1. Installation & Setup
+
 Follow these steps after cloning your fork.
 
 ### 1.1. Prerequisites (Do This First on a New Mac)
@@ -119,19 +129,18 @@ Follow these steps after cloning your fork.
     cd ~/projects/git/dotFile/scripts
     ```
 2.  **Execute `run_all.sh`:** Choose a mode:
-    * **Interactive Mode (Select Scripts):** Shows a menu to choose specific scripts (0-8) or `all`. **Warning:** Selecting individual scripts runs *only* those scripts; dependencies are NOT automatically included. Use with caution.
+    * **Interactive Mode (Select Scripts):** Shows a menu to choose specific scripts (0-9) or `all`. **Warning:** Selecting individual scripts runs *only* those scripts; dependencies are NOT automatically included. Use with caution.
         ```bash
         bash run_all.sh
         ```
-        ![runall](assets\runall.png)
-
+        ![runall](https://raw.githubusercontent.com/ravishan16/dotFile/main/assets/runall.png) 
 3.  **Follow Prompts:** Enter your `sudo` password and potentially your user password (`chsh`) when requested.
 4.  **Wait:** Installation takes time.
 
 ### 1.4. Post-Setup Actions (Required)
 
 1.  **Restart Terminal:** **Crucial!** Quit and reopen your terminal, or log out/in.
-131:2.  Add SSH Key to GitHub: If script `08` ran, copy the public key it printed and add it to your GitHub account settings online.
+2.  Add SSH Key to GitHub: If script `08` ran, copy the public key it printed and add it to your GitHub account settings online.
 3.  **Log into Apps:** Launch and log into GUI apps (Docker, Bitwarden, Dropbox, etc.).
 4.  **Final Configurations:** Install VS Code extensions, configure Docker, etc.
 
@@ -147,17 +156,23 @@ This repository is organized to separate setup logic from personal configuration
 * `.env`: **(You Create & Git Ignore!)** Stores user-specific variables like your Git name, email, and the main path for your code projects (`GIT_HOME`). It's sourced by scripts but should *not* be committed to Git if your repository is public.
 * `.gitignore`: Tells Git which files/folders *within this repository* to ignore (e.g., `.env`).
 * `README.md`: This file.
-* `scripts/`: Contains all the numbered setup scripts (`00` to `09`) and the master runner (`run_all.sh`).
-148:* `dot/`: **(Your Personal Config)** Contains *your* configuration files (dotFile). The setup scripts will create symbolic links from your home directory (`$HOME`) pointing to the files inside this folder (e.g., `$HOME/.zshrc` -> `.../dotFile/dot/.zshrc`). You customize these files!
+* `.github/`: Contains GitHub Actions workflows (e.g., mdBook deployment).
+* `docs/`: Source Markdown files for the `mdBook` guides.
+    * `SUMMARY.md`: Table of contents for the guides.
+* `dot/`: **(Your Personal Config)** Contains *your* configuration files (dotFile). The setup scripts will create symbolic links from your home directory (`$HOME`) pointing to the files inside this folder (e.g., `$HOME/.zshrc` -> `.../dotFile/dot/.zshrc`). You customize these files!
+* `scripts/`: Contains all the numbered setup scripts (`00` to `09`), the master runner (`run_all.sh`), and helper files (`helpers.sh`).
 * `python/`: Contains Python-related files, primarily your `requirements.txt` for `pip`.
+* `book.toml`: Configuration file for `mdBook`.
 
 ## 4. Key Tools Explained (Brief Overview)
 
-This setup installs and configures several important tools. See the **User Guide** section below for more detailed usage.
+This setup installs and configures several important tools. See the **Guides** section above for more detailed usage.
 
 * **Homebrew:** Package manager for macOS. Installs CLI tools and GUI apps.
 * **Miniconda:** `conda` environment manager, primarily for Python. Creates isolated project environments.
 * **Zsh + Oh My Zsh + Powerlevel10k:** Your enhanced shell environment with themes and plugins.
+* **Rust + Cargo:** Modern systems language and build tool/package manager (installed via `rustup` in script `09`).
+* **mdBook:** Tool to create online books from Markdown (used for the Guides).
 * **dockutil:** Used by scripts to manage Dock icons.
 * **SSH Keys:** Used for secure GitHub access.
 
@@ -194,7 +209,7 @@ This setup installs and configures several important tools. See the **User Guide
 | `dockutil`              | Command-line tool for managing macOS Dock items                             |
 | `rename`                | Renames multiple files using Perl regular expressions                       |
 
-*Note: `zsh-syntax-highlighting` and `zsh-autosuggestions` are installed as Oh My Zsh plugins in script `04`.*
+*Note: `zsh-syntax-highlighting` and `zsh-autosuggestions` are installed as Oh My Zsh plugins in script `04`. Rust is installed via `rustup` in script `09`.*
 
 ### GUI Applications (`scripts/06_install_apps_cask.sh`)
 
@@ -223,28 +238,25 @@ This setup installs and configures several important tools. See the **User Guide
 | `webpquicklook`       | QuickLook plugin enabling previews for WebP image files          |
 | `betterzip`           | Powerful archiving tool supporting various compression formats   |
 
-
 ## 6. Troubleshooting
 
-* **"Command not found" (e.g., `brew`, `conda`):** Ensure you've restarted your terminal after the setup. Check if the Homebrew `eval` line and conda `initialize` block are present in your `~/.zshrc` (which should be linked to `dot/.zshrc`). Verify Homebrew installation with `brew doctor`.
+* **"Command not found" (e.g., `brew`, `conda`, `cargo`):** Ensure you've restarted your terminal after the setup. Check if the Homebrew `eval` line and conda `initialize` block are present in your `~/.zshrc` (which should be linked to `dot/.zshrc`). Verify Homebrew installation with `brew doctor`. Ensure `$HOME/.cargo/bin` is in your PATH (script `09` attempts this).
 * **Permission Errors:** Ensure you run `run_all.sh` as your regular user. It will ask for `sudo` password when needed. Don't run the whole script *with* `sudo`.
 * **Homebrew Issues:** Run `brew doctor` and follow its advice. Sometimes `brew update && brew upgrade` can fix issues.
-* **Script Fails:** The `run_all.sh` script uses `set -e` in standard mode, so it should stop on the first error. Check the error message in the terminal output to identify the problematic command or script. You can try running the failed script individually for debugging (using the interactive menu in `run_all.sh` might be helpful here).
-
+* **Script Fails:** The `run_all.sh` script uses `set -e`, so it should stop on the first error. Check the error message in the terminal output to identify the problematic command or script. You can try running the failed script individually for debugging (using the interactive menu in `run_all.sh` might be helpful here).
 
 ## 7. Customizing Your Setup
 * **CLI Tools:** Edit the `CORE_PACKAGES` array in  `scripts/02_install_brew_core.sh`.
 * **GUI Apps:** Edit the `CASK_PACKAGES` array in `scripts/06_install_apps_cask.sh`.
-* **Shell:** EEdit the files in the `dot/` directory (`.zshrc`, `.p10k.zsh`, `.aliases`, `.functions`). Changes take effect in new terminal sessions due to the symbolic links.
+* **Shell:** Edit the files in the `dot/` directory (`.zshrc`, `.p10k.zsh`, `.aliases`, `.functions`). Changes take effect in new terminal sessions due to the symbolic links.
 * **Prompt:** Run `p10k configure`, then copy `~/.p10k.zsh` to `dot/.p10k.zsh`.
 * **Python:** Edit `python/requirements.txt`. Re-run script `05`.
-* **macOS:** Edit `scripts/07_configure_macos.sh`. Re-run script `07`.  Add more `defaults write` commands carefully.
+* **macOS:** Edit `scripts/07_configure_macos.sh`. Re-run script `07`. Add more `defaults write` commands carefully.
 * **Git/Project Path:** Edit `.env`. Re-run script `01` and potentially `03`.
 
 ## 8. Disclaimer
 
 These scripts modify system settings and install software. While reviewed for robustness, run them at your own risk. It is **highly recommended** to test the entire process on a virtual machine or a secondary, non-critical user account before running it on your primary system, especially for the first time or after making significant changes. Back up important data before proceeding.
-
 
 ## Contributing
 We welcome contributions! Please see our contributing guidelines for details on how to submit pull requests, report issues, and contribute to development.

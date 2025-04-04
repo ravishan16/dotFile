@@ -1,6 +1,6 @@
 # Automate Your Mac Setup: A Developer’s Guide
-
-![Banner](..\assets\banner_1.png)
+ 
+![Banner](https://raw.githubusercontent.com/ravishan16/dotFile/main/assets/banner_1.png)
 
 Setting up a new Mac for development can be tedious. Installing tools, configuring the shell, and tweaking settings by hand often takes hours and can vary between machines. After years of doing this manually across multiple devices, I created an automated setup to handle it more efficiently.
 
@@ -30,30 +30,38 @@ The repository (ravishan16/dotFile) includes scripts and files to automate a dev
     * **Shell Setup:** Installs Zsh with Oh My Zsh and plugins like `zsh-autosuggestions`, `zsh-syntax-highlighting`, and `autojump` for a better terminal.
     * **Python:** Sets up Miniconda for isolated Python environments.
     * **Git & SSH:** Configures Git and creates SSH keys for GitHub access.
-* **`Dotfiles (dot/):`**
+    * **Rust:** Installs Rust and Cargo via `rustup` for managing Rust projects and tools like `mdBook` (see `09_install_rust.sh`). * **`Dotfiles (dot/):`**
     * Includes `.zshrc`, `.aliases`, `.gitignore_global`, and others.
     * Symlinks these to your home directory so updates in the repo apply instantly.
 * **`Docs (docs/):`**
-    * Offers guides on Homebrew, Zsh, Git, Conda, Docker, and macOS shortcuts.
+    * Offers guides on Homebrew, Zsh, Git, Conda, Docker, Rust, and macOS shortcuts.
+    * These guides are built into an online book using **mdBook** (installed via script `09`) and published automatically via GitHub Actions. It’s a straightforward package to get a working dev setup with minimal effort.
+
 
 It’s a straightforward package to get a working dev setup with minimal effort.
 
-**Guides Included**
+## Guides (Published via mdBook)
 
-To help you get the most out of the setup and the tools installed, the repository includes these guides:
+The detailed guides for installation and tool usage are maintained as Markdown files in the `/docs` directory. They are automatically built into an online book using **mdBook** and published via GitHub Actions to GitHub Pages.
+
+**📚 [Access the Online Guides Here](https://ravishan16.github.io/dotFile/)** You can also build and view the guides locally:
+1. Ensure you have Rust and `mdbook` installed (script `09_install_rust.sh` handles this).
+2. Navigate to the repository root directory.
+3. Run `mdbook serve --open`.
 
 | Guide Title                                              | Description                                                                 |
 |----------------------------------------------------------|-----------------------------------------------------------------------------|
-| [dotFile: Installing Your Automated macOS Setup](docs/dotFile_Installation_Guide.md) | Step-by-step guide to set up your macOS environment with automation.       |
-| [Managing Software with Homebrew 🍺](docs/brew_user_guide.md) | Learn how to install, update, and manage software using Homebrew.          |
-| [Using Your Zsh Shell Superpowers ✨](docs/ozsh_user_guide.md) | Tips and tricks for using Zsh with Oh My Zsh, Powerlevel10k, and plugins.  |
-| [Basic Git & GitHub Workflow](docs/git_user_guide.md)    | A beginner-friendly guide to using Git and GitHub for version control.     |
-| [Managing Python with Conda (Miniconda)](docs/Conda_User_Guide.md) | Guide to managing Python environments and packages with Conda.             |
-| [Basic Docker Maintenance 🐳🧹](docs/docker_user_guide.md) | Learn how to prune and clean up Docker containers, images, and volumes.    |
-| [Your Terminal Command Center (iTerm2) 💻](docs/iterm_user_guide.md) | Guide to customizing and using iTerm2 for an efficient terminal experience.|
-| [Mac Keyboard Shortcut Cheat Sheet ⚡️](docs/mac_cheatsheet.md) | A handy list of keyboard shortcuts to boost your productivity on macOS.    |
-| [Basic Mac Housekeeping 🧹✨](docs/mac_user_guide.md)     | Tips for keeping your Mac clean, organized, and running smoothly.          |
-| [Custom Shell Aliases & Functions 🛠️](docs/custom_alias_userguide.md) | Learn how to create and use custom aliases and functions in your shell.    |
+| [dotFile: Installing Your Automated macOS Setup](https://ravishan16.github.io/dotFile/dotFile_Installation_Guide.html) | Step-by-step guide to set up your macOS environment with automation.       |
+| [Managing Software with Homebrew 🍺](https://ravishan16.github.io/dotFile/brew_user_guide.html) | Learn how to install, update, and manage software using Homebrew.          |
+| [Using Your Zsh Shell Superpowers ✨](https://ravishan16.github.io/dotFile/ozsh_user_guide.html) | Tips and tricks for using Zsh with Oh My Zsh, Powerlevel10k, and plugins.  |
+| [Basic Git & GitHub Workflow](https://ravishan16.github.io/dotFile/git_user_guide.html)    | A beginner-friendly guide to using Git and GitHub for version control.     |
+| [Managing Python with Conda (Miniconda)](https://ravishan16.github.io/dotFile/Conda_User_Guide.html) | Guide to managing Python environments and packages with Conda.             |
+| [Basic Docker Maintenance 🐳🧹](https://ravishan16.github.io/dotFile/docker_user_guide.html) | Learn how to prune and clean up Docker containers, images, and volumes.    |
+| [Your Terminal Command Center (iTerm2) 💻](https://ravishan16.github.io/dotFile/iterm_user_guide.html) | Guide to customizing and using iTerm2 for an efficient terminal experience.|
+| [Rust Essentials Guide 🦀](https://ravishan16.github.io/dotFile/rust_essentials_guide.html) | Quick reference for essential Rust and Cargo commands.                     |
+| [Mac Keyboard Shortcut Cheat Sheet ⚡️](https://ravishan16.github.io/dotFile/mac_cheatsheet.html) | A handy list of keyboard shortcuts to boost your productivity on macOS.    |
+| [Basic Mac Housekeeping 🧹✨](https://ravishan16.github.io/dotFile/mac_user_guide.html)     | Tips for keeping your Mac clean, organized, and running smoothly.          |
+| [Custom Shell Aliases & Functions 🛠️](https://ravishan16.github.io/dotFile/custom_alias_userguide.html) | Learn how to create and use custom aliases and functions in your shell.    |
 
 **How to Run It**
 
@@ -85,7 +93,7 @@ Here’s how to use the setup on your Mac:
     ```
     Pick "all" from the menu and enter your password when asked.
 
-    ![runall](..\assets\runall.png)
+    ![runall](https://raw.githubusercontent.com/ravishan16/dotFile/main/assets/runall.png)
     
 6.  **Finish Up:**
     * Restart your terminal.

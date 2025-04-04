@@ -28,6 +28,7 @@ AVAILABLE_SCRIPTS=(
   "06_install_apps_cask.sh"   # Index 6
   "07_configure_macos.sh"     # Index 7
   "08_setup_ssh_github.sh"    # Index 8
+  "09_install_rust.sh"        # Index 9 <-- ADDED RUST SCRIPT
 )
 NUM_SCRIPTS="${#AVAILABLE_SCRIPTS[@]}"
 LAST_INDEX=$((NUM_SCRIPTS - 1)) # Last valid index (0-based)
@@ -43,7 +44,7 @@ display_menu() {
     local i=0; for script_name in "${AVAILABLE_SCRIPTS[@]}"; do printf "%2d) %s\n" "$i" "$script_name"; i=$((i + 1)); done; echo ""
     echo -e "${C_CYAN}Options:${C_RESET}"
     echo -e "  ${C_BOLD}all${C_RESET}) Run all scripts (0-${LAST_INDEX}) in sequence"
-    echo -e "   ${C_BOLD}#${C_RESET}) Run ONLY specific script number(s) (e.g., '0 2 4')" # Clarified
+    echo -e "   ${C_BOLD}#${C_RESET}) Run ONLY specific script number(s) (e.g., '0 2 9')" # Clarified
     echo -e "   ${C_BOLD}q${C_RESET}) Quit"
     echo -e "${C_BOLD}${C_MAGENTA}----------------------------------------${C_RESET}"
 }
@@ -65,7 +66,7 @@ if [ ! -f "$ENV_FILE" ]; then echo -e "${C_YELLOW}⚠️ Warning: '.env' not fou
 
 while true; do
     display_menu
-    read -p "$(echo -e ${C_BOLD}${C_YELLOW}"Enter choice(s) (e.g., 0 2 4, all, q): "${C_RESET})" user_choice
+    read -p "$(echo -e ${C_BOLD}${C_YELLOW}"Enter choice(s) (e.g., 0 2 9, all, q): "${C_RESET})" user_choice
     user_choice=$(echo "$user_choice" | xargs)
 
     case "$user_choice" in

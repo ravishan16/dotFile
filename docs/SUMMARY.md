@@ -15,6 +15,7 @@
     - [Conda Guide](Conda_User_Guide.md)
     - [Docker Guide](docker_user_guide.md)
     - [Redis Guide](redis.md)
+    - [Rust Essentials Guide](rust_essentials_guide.md)
 
 - [macOS Specifics](macos.md)
     - [macOS User Guide](mac_user_guide.md)
