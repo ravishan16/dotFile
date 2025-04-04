@@ -62,6 +62,7 @@ The detailed guides for installation and tool usage are maintained as Markdown f
 | [Mac Keyboard Shortcut Cheat Sheet ⚡️](https://ravishan16.github.io/dotFile/mac_cheatsheet.html) | A handy list of keyboard shortcuts to boost your productivity on macOS.    |
 | [Basic Mac Housekeeping 🧹✨](https://ravishan16.github.io/dotFile/mac_user_guide.html)     | Tips for keeping your Mac clean, organized, and running smoothly.          |
 | [Custom Shell Aliases & Functions 🛠️](https://ravishan16.github.io/dotFile/custom_alias_userguide.html) | Learn how to create and use custom aliases and functions in your shell.    |
+| [Redis Cheatsheet for macOS 🍎](https://ravishan16.github.io/dotFile/redis.html)           | Quick commands and tips for installing, managing, and using Redis on macOS.|
 
 **How to Run It**
 

@@ -55,6 +55,7 @@ The detailed guides for installation and tool usage are maintained as Markdown f
 | [Mac Keyboard Shortcut Cheat Sheet ⚡️](docs/mac_cheatsheet.md) | A handy list of keyboard shortcuts to boost your productivity on macOS.    |
 | [Basic Mac Housekeeping 🧹✨](docs/mac_user_guide.md)     | Tips for keeping your Mac clean, organized, and running smoothly.          |
 | [Custom Shell Aliases & Functions 🛠️](docs/custom_alias_userguide.md) | Learn how to create and use custom aliases and functions in your shell.    |
+| [Redis Cheatsheet for macOS 🍎](docs/redis.md)           | Quick commands and tips for installing, managing, and using Redis on macOS.|
 
 ## 1. Installation & Setup
 
