@@ -1,0 +1,66 @@
+
+# Main configuration file for the mdBook project.
+# Located at the root of your book project (e.g., my-guides-book/book.toml).
+
+[book]
+# The title of the book. This will appear in the browser tab and header.
+title = "macOS & Dev Setup Guides"
+
+# A description for the book, used in HTML metadata.
+description = "A comprehensive guide to setting up a macOS development environment and various tools."
+
+# The author(s) of the book.
+authors = ["Ravishankar Sivasubramaniam"]
+
+# The primary language of the book (ISO 639-1 code).
+language = "en"
+
+# Specifies that the source files are in the 'src' directory.
+src = "docs"
+
+# --- Optional Settings ---
+
+# Enable multilingual support (if you plan to translate later).
+# multilingual = false
+
+# Change the build output directory (default is 'book').
+# build-dir = "docs-output" # Example: change if needed for specific hosting
+
+[output.html]
+# Theme settings for the HTML output.
+
+# Use a specific theme file (located in the book's root directory).
+# theme = "my-theme/"
+
+# Default theme (can be 'light', 'rust', 'coal', 'navy', 'ayu').
+default-theme = "light"
+
+# Preferred dark theme (if the user's system prefers dark mode).
+preferred-dark-theme = "navy"
+
+# Add a link to the Git repository in the header.
+git-repository-url = "https://github.com/ravishan16/my-guides-book" # <-- TODO: Change this!
+# git-repository-icon = "fa-github" # Uses Font Awesome icons
+
+# Add additional CSS files. Place them in the book's root or theme directory.
+# additional-css = ["custom.css"]
+
+# Add additional JavaScript files.
+# additional-js = ["custom.js"]
+
+# Enable or disable the search functionality.
+search = { enable = true, limit-results = 20, use-boolean-and = true }
+
+# Add favicons. Place the files in the book's root directory.
+# favicon-svg = "favicon.svg"
+# favicon-png = "favicon.png"
+
+# --- Preprocessors (Advanced) ---
+# You can add mdBook plugins here if you install them.
+# Example:
+# [preprocessor.links]
+# command = "mdbook-linkcheck"
+
+# [preprocessor.mermaid]
+# command = "mdbook-mermaid"
+
