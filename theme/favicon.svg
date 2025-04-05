@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#F5E6CC"/>
+  
+  <!-- Simplified angle brackets (coding symbol) -->
+  <path d="M8 10 L12 14 L8 18" stroke="#D32F2F" stroke-width="2" fill="none"/>
+  <path d="M24 10 L20 14 L24 18" stroke="#D32F2F" stroke-width="2" fill="none"/>
+  
+  <!-- Simplified "RAVI" text (stylized as a shape) -->
+  <text x="6" y="28" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#D32F2F">RAVI</text>
+</svg>

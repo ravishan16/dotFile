@@ -1,0 +1,64 @@
+/* Tutti Frutti Theme for mdBook */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;600&family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  --bg: #fff8f0;
+  --fg: #2b2b2b;
+  --primary: #f94144;
+  --secondary: #f9c74f;
+  --link: #577590;
+  --code-bg: #fff0e6;
+  --code-text: #2b2b2b;
+
+  --font-header: 'Quicksand', sans-serif;
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  color: var(--primary);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre, code {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  font-family: var(--font-mono);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+nav {
+  background-color: var(--secondary);
+}
+
+.navbar-title {
+  font-family: var(--font-header);
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+/* Custom logo area */
+#custom-logo {
+  font-family: var(--font-header);
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--primary);
+}
